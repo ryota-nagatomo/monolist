@@ -13,7 +13,9 @@
     </div>
 @endsection
 
-@section('content')
-    @include('items.items')
-    {!! $items->render() !!}
-@endsection
+@if (Auth::check())
+    @section('content')
+        @include('items.items')
+        {!! $items->render() !!}
+    @endsection
+@endif
