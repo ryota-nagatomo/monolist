@@ -11,7 +11,7 @@
                             @if ($item->id)
                                 <p class="item-title"><a href="{{ route('items.show', $item->id) }}">{{ $item->name }}</a></p>
                             @else
-                                <p class="item-title">{{ $item->name }}</p>
+                                <p class="item-title"><a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a></p>
                             @endif
                             <div class="buttons text-center">
                                 @if (Auth::check())
